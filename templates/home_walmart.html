@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="head"></div><img src="/static/newlogo.png" alt="Walmart"></div>
+        <div class="head"><h1 name="head" id="head">Walmart Weekly Sales</h1></div>
+        
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('walmart')}}">Model</a>
+            <a href="{{url_for('analytics')}}">Analytics</a>
+        </nav>
+        <br><br>
+    </header>
+    <section>
+        <h2>Description</h2>
+        <p>One of the leading retail stores in the US, Walmart, would like to predict the sales and demand accurately. There are certain events and holidays which impact sales on each day. There are sales data available for 45 stores of Walmart. The business is facing a challenge due to unforeseen demands and runs out of stock some times, due to the inappropriate machine learning algorithm. An ideal ML algorithm will predict demand accurately and ingest factors like economic conditions including CPI, Unemployment Index, etc. </p>
+        <p>Walmart runs several promotional markdown events throughout the year. These markdowns precede prominent holidays, the four largest of all, which are the Super Bowl, Labour Day, Thanksgiving, and Christmas. The weeks including these holidays are weighted five times higher in the evaluation than non-holiday weeks. Part of the challenge presented by this competition is modeling the effects of markdowns on these holiday weeks in the absence of complete/ideal historical data. Historical sales data for 45 Walmart stores located in different regions are available.</p>
+    
+        <h2>Objective</h2>
+        <ul>
+            <li>Understand the Dataset & cleanup (if required).</li>
+            <li>Build Regression models to predict the sales w.r.t single & multiple features.</li>
+            <li>Also evaluate the models & compare their respective scores like R2, RMSE, etc.</li>
+        </ul>
+        <h3>Link to the Dataset</h3>
+        <a id="dataset" href="https://www.kaggle.com/datasets/yasserh/walmart-dataset">Click here</a>
+    </section>
+</body>
+</html>

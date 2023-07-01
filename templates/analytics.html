@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+</head>
+<body>
+    <header class="header">
+
+        <div class="head"></div><img src="/static/newlogo.png" alt="Walmart"></div>
+        <div class="head"><h1 name="head" id="head">Walmart Weekly Sales</h1></div>
+        
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('walmart')}}">Model</a>
+            <a href="{{url_for('analytics')}}">Analytics</a>
+        </nav>
+        <br><br>
+    </header>
+    <section>
+        <h2>About the Dataset</h2>
+        <p>This is the historical data that covers sales from 2010-02-05 to 2012-11-01. </p>
+        <ul name="list">      
+            <li>Store - the store number</li>
+            <li>Date - the week of sales</li>
+            <li>Weekly_Sales - sales for the given store</li>
+            <li>Holiday_Flag - whether the week is a special holiday week 1 – Holiday week 0 – Non-holiday week</li>
+            <li>Temperature - Temperature on the day of sale</li>
+            <li>Fuel_Price - Cost of fuel in the region</li>
+            <li>CPI – Prevailing consumer price index</li>
+            <li>Unemployment - Prevailing unemployment rate</li>
+        </ul>
+
+        <h2>Dataset Analysis</h2>
+        <div class="graph">
+            <h3>Weekly Sales</h3>
+            <img class="stat" src="/static/weeklysales.jpg" alt="weekly sales" width="200px" height="500px">
+        </div>
+        <div class="graph">
+            <h3>Holiday Flag</h3>
+            <img class="stat" src="/static/holiday.jpg" alt="">
+        </div>
+        <div class="graph">
+            <h3>Temperature</h3>
+            <img class="stat" src="/static/temp.jpg" alt="">
+        </div>
+        <div class="graph">
+            <h3>Fuel Price</h3>
+            <img class="stat" src="/static/fuel.jpg" alt="">
+        </div>    
+        <div class="graph">
+            <h3>Consumer Price Index</h3>
+            <img class="stat" src="/static/cpi.jpg" alt="">
+        </div>    
+        <div class="graph">
+            <h3>Unemployment Rate</h3>
+            <img class="stat" src="/static/unemployment.jpg" alt="">
+        </div>    
+        <div class="graph">
+            <h3>Heat Map</h3>
+            <img class="stat" src="/static/heatmap.jpg" alt="heat map">
+        </div>    
+        <h2>Model Results</h2>
+        <p>R2 score = 0.933590611628628</p>
+        <p>MSE = 21327120848.369434</p>
+        <p>RMSE = 146038.08013107209</p>
+        <p>MAE = 75651.95067545056</p>
+        
+    </section>
+</body>
+</html>

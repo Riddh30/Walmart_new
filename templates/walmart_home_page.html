@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="head"></div><img src="/static/newlogo.png" alt="Walmart"></div>
+        <div class="head"><h1 name="head" id="head">Walmart Weekly Sales</h1></div>
+        
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('walmart')}}">Model</a>
+            <a href="{{url_for('analytics')}}">Analytics</a>
+        </nav>
+        <br><br>
+    </header>
+    <form action="/login" method="post">
+        <table>
+            <tr>
+                <td><label for="store">Store</label></td>
+                <td><input type="number" name="storeId" id="storeId" min="1" max="45"  required></td>
+            </tr>
+            <tr>
+                <td><label for="date">Date</label></td>
+                <td><input type="date" name="date" id="date" min="2010-02-05" required></td>
+            </tr>
+            <tr>
+                <td><label for="Temperature">Temperature</label></td>
+                <td><input type="number" required name="Temperature" id="Temperature"  min="-5" max="105"></td>
+            </tr>
+            <tr>
+                <td><label for="fuelP">Fuel Price</label></td>
+                <td><input type="number" name="fuelP" id="fuelP" min="2" max="5" required></td>
+            </tr>
+            <tr>
+                <td><label for="cpi">Consumer Price Index</label></td>
+                <td><input type="number" name="cpi" id="cpi" min="100" max="400" required></td>
+            </tr>
+            <tr>
+                <td><label for="unemployment">Unemployment Rate</label></td>
+                <td><input type="number" name="unemployment" id="unemployment" min="1" max="20" required><br></td>
+            </tr>
+            
+            <tr><td><br></td></tr>
+            
+        </table>  
+        <input id="submit" type="submit" value="Submit" >
+        <input type="reset"><br><br><br><br>
+
+        <b id="result">{{y}}</b>
+    </form>
+    <br><br>
+    
+</body>
+</html>
